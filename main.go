@@ -2,12 +2,12 @@ package main
 
 import (
   "helloworld"
+  "routes"
+  "sayhi"
 )
 
-var route = null
 func main()  {
-  route := mux.NewRouter()
+  sayhi.Sayhi()
   helloworld.Print_Hello_World()
-  err := http.ListenAndServe(":9080", r)
-  fmt.Print(err)
+  routes.Serve("9080")
 }

@@ -1,17 +1,13 @@
 package helloworld
 
 import (
-"fmt"
 "net/http"
-"github.com/gorilla/mux"
+"routes"
 )
 
 func Print_Hello_World() {
-  route.HandleFunc("/", Test)
-}
-
-
-func Test(w http.ResponseWriter, r *http.Request)  {
-   payload := []byte("Hello World!")
-   w.Write(payload)
+  routes.HelloR.HandleFunc("/", func (w http.ResponseWriter, r *http.Request)  {
+     payload := []byte("Hello World!")
+     w.Write(payload)
+  })
 }
