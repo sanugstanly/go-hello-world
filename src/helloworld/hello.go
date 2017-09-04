@@ -7,10 +7,7 @@ import (
 )
 
 func Print_Hello_World() {
-  r := mux.NewRouter()
-  r.HandleFunc("/", Test)
-  err := http.ListenAndServe(":9080", r)
-  fmt.Print(err)
+  route.HandleFunc("/", Test)
 }
 
 

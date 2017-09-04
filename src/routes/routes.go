@@ -7,7 +7,8 @@ import (
 )
 
 func Route()  {
-  r := mux.NewRouter()
+  route := mux.NewRouter()
+
   err := http.ListenAndServe(":9080", r)
   fmt.Print(err)
 }
